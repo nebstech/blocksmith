@@ -8,7 +8,7 @@ export const HeroSection = () => {
       <div className="contaier">
         <p 
         className="uppercase font-extrabold text-center text-zinc-500 tracking-wider">
-          Introducting Blocksmith
+          Introducting Blockforge
           </p>
         <h1 
         className="font-heading font-black text-5xl lg:text-7xl text-center mt-4 md:text-6xl lg:max-w-3xl mx-auto max-w-xl">
@@ -16,7 +16,7 @@ export const HeroSection = () => {
         </h1>
         <p 
         className="text-center text-xl mt-6 text-zinc-400 md:text-2xl max-w-xl mx-auto">
-          Blocksmith is pioneering smart contract integrity with cutting-edge data solutions.
+          Blockforge is pioneering smart contract integrity with cutting-edge data solutions.
         </p>
         <div className="flex justify-center mt-10">
           <CutCornerButton className="">Get Started</CutCornerButton>
