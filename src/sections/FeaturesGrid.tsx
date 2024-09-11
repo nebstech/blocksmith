@@ -12,11 +12,11 @@ export const FeaturesGrid = () => {
   return (
     <section className="py-24 overflow-x-clip">
       <div className="container">
-        <div className="flex flex-col gap-56 md:gap-48">
-          <div className="grid grid-cols-3 gap-8">
+        <div className="flex flex-col gap-56 md:gap-48 lg:gap-80">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="col-span-2">
-              <h2 className="font-heading font-black text-4xl md:text-5xl">Empowering the future of blockchain.</h2>
-              <p className="text-xl text-zinc-400 mt-8">
+              <h2 className="font-heading font-black text-4xl md:text-5xl lg:text-6xl">Empowering the future of blockchain.</h2>
+              <p className="text-xl lg:text-2xl text-zinc-400 mt-8">
                 Blockforge provides robust and secure infrastructure to support the next generation of decentralized applications.
               </p>
               <ul className="flex flex-col gap-8 mt-12">
@@ -34,7 +34,7 @@ export const FeaturesGrid = () => {
                 <LearnMoreButton>Learn More</LearnMoreButton>
               </div>
             </div>
-            <div>
+            <div className="hidden md:block">
               <div className="relative inline-flex z-0">
                 <img 
                 src="/assets/images/torus-knot.png" 
@@ -49,8 +49,8 @@ export const FeaturesGrid = () => {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-8">
-            <div className="relative">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="relative hidden md:block">
               <div className="absolute right-0 z-0">
                   <img 
                   src="/assets/images/cone.png" 
@@ -65,8 +65,8 @@ export const FeaturesGrid = () => {
               </div>
             </div>
             <div className="col-span-2">
-                <h2 className="font-heading font-black text-4xl md:text-5xl">Blockforge leads the way.</h2>
-                <div className="flex flex-col text-xl text-zinc-400 mt-6 gap-6">
+                <h2 className="font-heading font-black text-4xl md:text-5xl lg:text-6xl">Blockforge leads the way.</h2>
+                <div className="flex flex-col lg:text-2xl text-xl text-zinc-400 mt-6 gap-6">
                   <p>
                     Blockforge is dedicated to supporting the revolution of Web3 applications by delivering the necessary infrastructure and security for Web3
                   </p>
