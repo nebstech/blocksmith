@@ -2,6 +2,7 @@ import type { CollectionEntry } from "astro:content";
 import { Card } from "../components/Card";
 import { getPostColorFromCategory } from "../utils/postUtils";
 import { Tag } from "../components/Tag";
+import { CutCornerButton } from "../components/CutCornerButton";
 
 export const LatestPosts = (props: {
   latestPosts: CollectionEntry<'blog'>[];
@@ -18,12 +19,15 @@ export const LatestPosts = (props: {
           {latestPosts.map(({ data: { title, description, category } }, postIndex) => (
             <Card key={postIndex} buttonText="Read More" color={getPostColorFromCategory(category)}>
               <Tag color={getPostColorFromCategory(category)}>{category}</Tag>
-              <h3 className="font-heading font-black text-3xl mt-4">{title}</h3>
+              <h3 className="font-heading font-black text-3xl mt-3">{title}</h3>
               <p className="text-lg text-zinc-400 mt-6">
                 {description}
               </p>
           </Card>
           ))}
+        </div>
+        <div className="flex justify-center mt-48">
+          <CutCornerButton>Read The Blog</CutCornerButton>
         </div>
       </div>
     </section>
