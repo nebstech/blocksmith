@@ -1,5 +1,5 @@
 import { twMerge } from "tailwind-merge";
-
+import { motion } from "framer-motion";
 const testimonials = [
   {
     text: 'The user experience is phenomenal, and the support team is always there to help. Highly recommended!',
@@ -28,7 +28,27 @@ export const TestimonialsSection = () => {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-8 lg:gap-12">
           {testimonials.map((testimonial, testimonialIndex) => (
-              <blockquote key={testimonialIndex} className={twMerge(testimonialIndex === 2 && 'md:hidden lg:block')}>
+              <motion.blockquote 
+              key={testimonialIndex} 
+              initial={{
+                opacity: 0, 
+                y: 24,
+              }}
+              whileInView={{
+                opacity: 1, 
+                y: 0,
+              }}
+              viewport={{
+                once: true, 
+              }}
+              transition={{
+                delay: testimonialIndex * 0.5,
+                ease: 'easeInOut',
+                duration: 1, 
+              }}
+              className={twMerge(
+                testimonialIndex === 2 && 'md:hidden lg:block'
+                )}>
                 <p className="font-heading text-3xl lg:text-4xl font-black">
                   &ldquo;{testimonial.text}&rdquo;
                 </p>
@@ -43,7 +63,7 @@ export const TestimonialsSection = () => {
                     <div className="not-italic text-zinc-400">{testimonial.title}</div>
                   </div>
                 </cite>
-              </blockquote>
+              </motion.blockquote>
           ))}
         </div>
       </div>
