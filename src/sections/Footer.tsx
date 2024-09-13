@@ -41,7 +41,7 @@ export const Footer = () => {
             <a href="#">Contact</a>
           </nav>
         </div>
-        <div className="mt-12 md:mt-48 flex justify-between items-center">
+        <div className="mt-12 md:mt-48 md:flex justify-between items-center">
           <p className="text-zinc-400">&copy; 2024 Blockforge. All rights reserved.</p>
           <div className="mt-4 md:mt-0 flex gap-6">
             {socialIcons.map((icon, iconIndex) => (
