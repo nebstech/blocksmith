@@ -63,14 +63,14 @@ export const HeroSection = () => {
               <Hexagon className="size-[1800px]"/>
             </div>
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-            <Circle className="absolute left-[200px] -top-[900px]">
+            <Circle className="absolute left-[200px] -top-[900px]" animate>
                 <motion.img src="/assets/images/cube.png" alt="cube 3d image" className="size-[140px]" ref={cubeRef} style={{
                   rotate: cubeRotate,
                 }}/>
               </Circle>
             </div>
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-              <Circle className="absolute left-[200px] top-[270px]">
+              <Circle className="absolute left-[200px] top-[270px] " animate>
                 <motion.img src="/assets/images/cuboid.png" alt="cuboid 3d image" className="size-[140px]" ref={cuboidRef} style={{
                   rotate: cuboidRotate,
                 }}/>
