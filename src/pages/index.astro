@@ -8,6 +8,7 @@ import { LatestPosts } from '../sections/LatestPosts.tsx';
 import { getCollection } from "astro:content";
 import { TestimonialsSection } from '../sections/Testimonials.tsx';
 import { CallToAction } from '../sections/CallToAction.tsx';
+import { Footer } from '../sections/Footer.tsx';
 
 const posts = await getCollection('blog');
 const latestPosts = posts.sort((a, b) => {
@@ -24,4 +25,5 @@ const latestPosts = posts.sort((a, b) => {
   <LatestPosts latestPosts={latestPosts}/>
   <TestimonialsSection />
   <CallToAction />
+  <Footer />
 </DefaultLayout>
