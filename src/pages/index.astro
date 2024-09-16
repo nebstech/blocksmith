@@ -1,14 +1,10 @@
 ---
 import DefaultLayout from "../layouts/Default.astro";
-import { HeaderSection } from '../sections/Header.tsx';
 import { HeroSection } from '../sections/Hero.tsx';
 import { FeaturesCardsSection } from '../sections/FeaturesCard.tsx';
 import { FeaturesGrid } from '../sections/FeaturesGrid.tsx';
 import { LatestPosts } from '../sections/LatestPosts.tsx';
 import { getCollection } from "astro:content";
-import { TestimonialsSection } from '../sections/Testimonials.tsx';
-import { CallToAction } from '../sections/CallToAction.tsx';
-import { Footer } from '../sections/Footer.tsx';
 
 const posts = await getCollection('blog');
 const latestPosts = posts.sort((a, b) => {
@@ -18,12 +14,10 @@ const latestPosts = posts.sort((a, b) => {
 ---
 
 <DefaultLayout>
-  <HeaderSection client:load />
+  
   <HeroSection client:load />
   <FeaturesCardsSection client:load />
   <FeaturesGrid client:load />
   <LatestPosts latestPosts={latestPosts} client:load />
-  <TestimonialsSection client:load/>
-  <CallToAction client:load/>
-  <Footer />
+  
 </DefaultLayout>

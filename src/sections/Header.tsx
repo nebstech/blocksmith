@@ -4,6 +4,7 @@ import { Hexagon } from "../components/Hexagon";
 import { twMerge } from "tailwind-merge";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
+
 const navLinks = [
   {
     title: 'Home',
