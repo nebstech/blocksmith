@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { CutCornerButton } from "../components/CutCornerButton";
 import { LearnMoreButton } from "../components/LearnMoreButton";
 import { motion, useScroll, useTransform } from "framer-motion";
